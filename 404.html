@@ -140,27 +140,27 @@
 </article>
 
 
-<div class="sharebox">
-    
-<div class="notification is-danger">
-    You need to set <code>install_url</code> to use ShareThis. Please set it in <code>_config.yml</code>.
-</div>
-
-</div>
-
 
 
 <div class="comments">
     <h3 class="title is-4">Comments</h3>
     
-<div id="disqus_thread">
-    
-    <div class="notification is-danger">
-        You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.
-    </div>
-    
-    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</div>
+<div id="comment-container"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+	var gitment = new Gitment({
+		id: '404.html',
+		owner: 'xixian2106',
+		repo: 'https://github.com/xixian2106/xixian2106.github.io',
+		oauth: {
+			client_id: '48687c10f9e9abbe2727',
+			client_secret: 'a0ce45052e3c6b4729fb6db88bf4b6d5099d5cb5',
+		},
+	})
+	gitment.render('comment-container')
+</script>
+
 </div>
 
     </div>
