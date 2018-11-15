@@ -35,6 +35,24 @@
   </entry>
   
   <entry>
+    <title>我的第一篇帖子</title>
+    <link href="https://xixian2106.github.io/2018/11/08/zh-cn/First-Post/"/>
+    <id>https://xixian2106.github.io/2018/11/08/zh-cn/First-Post/</id>
+    <published>2018-11-08T09:24:18.000Z</published>
+    <updated>2018-11-15T11:16:40.090Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/images/This-Girl.png" alt=""><br>看看我的<a href="https://anilist.co/user/XiXian" target="_blank" rel="noopener">看番列表</a>。</p><a id="more"></a><p>真香。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/images/This-Girl.png&quot; alt=&quot;&quot;&gt;&lt;br&gt;看看我的&lt;a href=&quot;https://anilist.co/user/XiXian&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;看番列表&lt;/a&gt;。&lt;/p&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>Hello World</title>
     <link href="https://xixian2106.github.io/1997/11/08/hello-world/"/>
     <id>https://xixian2106.github.io/1997/11/08/hello-world/</id>
