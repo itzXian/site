@@ -17,11 +17,11 @@
     <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hello World">
-<meta property="og:url" content="https://xixian2106.github.io/1997/11/08/hello-world/index.html">
+<meta property="og:url" content="https://xixian2106.github.io/hello-world/index.html">
 <meta property="og:site_name" content="XiXian Blog">
 <meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-11-08T10:34:34.130Z">
+<meta property="og:updated_time" content="2018-11-15T14:28:46.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hello World">
 <meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.">
@@ -129,7 +129,7 @@
         <span class="column is-narrow">
             
             
-            a minute read (About 122 words)
+            2 minutes read (About 361 words)
         </span>
         
     </div>
@@ -144,7 +144,88 @@
 <h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>iMore info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<h3 id="Permalinks"><a href="#Permalinks" class="headerlink" title="Permalinks"></a>Permalinks</h3><p>You can specify the permalinks for your site in <code>_config.yml</code> or in the front-matter for each post.</p>
+<h3 id="Variables"><a href="#Variables" class="headerlink" title="Variables"></a>Variables</h3><p>Besides the following variables, you can use any attributes in the permalink.</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>:year</code></td>
+<td>Published year of posts (4-digit)</td>
+</tr>
+<tr>
+<td><code>:month</code></td>
+<td>Published month of posts (2-digit)</td>
+</tr>
+<tr>
+<td><code>:i_month</code></td>
+<td>Published month of posts (Without leading zeros)</td>
+</tr>
+<tr>
+<td><code>:day</code></td>
+<td>Published day of posts (2-digit)</td>
+</tr>
+<tr>
+<td><code>:i_day</code></td>
+<td>Published day of posts (Without leading zeros)</td>
+</tr>
+<tr>
+<td><code>:title</code></td>
+<td>Filename</td>
+</tr>
+<tr>
+<td><code>:post_title</code></td>
+<td>Post title</td>
+</tr>
+<tr>
+<td><code>:id</code></td>
+<td>Post ID</td>
+</tr>
+<tr>
+<td><code>:category</code></td>
+<td>Categories. If the post is uncategorized, it will use the <code>default_category</code> value.</td>
+</tr>
+</tbody>
+</table>
+<p>You can define the default value of each variable in the permalink through the <code>permalink_defaults</code> setting:</p>
+<figure class="highlight yaml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-attr">permalink_defaults:</span></span><br><span class="line"><span class="hljs-attr">  lang:</span> <span class="hljs-string">en</span></span><br></pre></td></tr></table></figure>
+<h3 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h3><p>  Given a post named <code>hello-world.md</code> in the <code>source/_posts</code> folder with the following content.</p>
+  <figure class="highlight yaml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-attr">title:</span> <span class="hljs-string">Hello</span> <span class="hljs-string">World</span></span><br><span class="line"><span class="hljs-attr">date:</span> <span class="hljs-number">2013</span><span class="hljs-bullet">-07</span><span class="hljs-bullet">-14</span> <span class="hljs-number">17</span><span class="hljs-string">:01:34</span></span><br><span class="line"><span class="hljs-attr">categories:</span></span><br><span class="line"><span class="hljs-bullet">-</span> <span class="hljs-string">foo</span></span><br><span class="line"><span class="hljs-bullet">-</span> <span class="hljs-string">bar</span></span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>  <code>:year/:month/:day/:title/</code></td>
+<td>2013/07/14/hello-world</td>
+</tr>
+<tr>
+<td>  <code>:year-:month-:day-:title.html</code></td>
+<td>2013-07-14-hello-world.html</td>
+</tr>
+<tr>
+<td>  <code>:category/:title</code></td>
+<td>foo/bar/hello-world</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Multi-language-Support"><a href="#Multi-language-Support" class="headerlink" title="Multi-language Support"></a>Multi-language Support</h3><p>  To create a multi-language site, you can modify the <code>new_post_name</code> and <code>permalink</code> settings like this:</p>
+  <figure class="highlight yaml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-attr">new_post_name:</span> <span class="hljs-string">:lang/:title.md</span></span><br><span class="line"><span class="hljs-attr">permalink:</span> <span class="hljs-string">:lang/:title/</span></span><br></pre></td></tr></table></figure>
+<p>  When you create a new post, the post will be saved to:</p>
+  <figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="hljs-string">"Hello World"</span> --lang tw</span><br><span class="line"><span class="hljs-comment"># =&gt; source/_posts/tw/Hello-World.md</span></span><br></pre></td></tr></table></figure>
+<p>  and the URL will be:</p>
+  <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://localhost:4000/tw/hello-world/</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
 
     
     </div>
@@ -153,7 +234,7 @@
     <div class="columns is-mobile is-multiline article-nav">
         <span class="column is-12-mobile is-half-desktop  article-nav-prev">
             
-            <a href="/2018/11/08/First-Post/">My First Post</a>
+            <a href="/First-Post/">My First Post</a>
             
         </span>
         <span class="column is-12-mobile is-half-desktop is-hidden-mobile article-nav-next">
@@ -208,11 +289,11 @@
         <div class="dropdown-menu has-text-left" role="menu">
             <div class="dropdown-content">
             
-                <a href="/1997/11/08/hello-world/" class="dropdown-item">
+                <a href="/hello-world/" class="dropdown-item">
                     English
                 </a>
             
-                <a href="/zh-cn/1997/11/08/hello-world/" class="dropdown-item">
+                <a href="/zh-cn/hello-world/" class="dropdown-item">
                     简体中文
                 </a>
             
