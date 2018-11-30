@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'noto_sansregular';
+    src: url('/fonts/notosans-regular-webfont.eot');
+    src: url('/fonts/notosans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/notosans-regular-webfont.woff2') format('woff2'),
+         url('/fonts/notosans-regular-webfont.woff') format('woff'),
+         url('/fonts/notosans-regular-webfont.ttf') format('truetype'),
+         url('/fonts/notosans-regular-webfont.svg#noto_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
